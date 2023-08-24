@@ -1,0 +1,370 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %} IXAYA {% endblock %}
+
+{% block body %}
+
+<div id="inicio">
+<div class="container-fluid px-0 Hero" style="height: 1038px;">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid" style="margin-top: 10px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ms-auto" style="align-items: center;">
+          <li class="nav-item px-2">
+            <a class="nav-link active" href="/inicio"> Inicio </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#nosotros"> Nosotros </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="/blog"> Blog </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#aliados"> Aliados </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#patrocinadores"> Patrocinadores </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link"  href="#contacto">Contacto</a>
+          </li>
+          <li><a class="nav-link"  href="#donacion">
+            <div id="Cta" style=" width: 233px; justify-content: center; align-items: center; background: #A08847; display: inline-flex">
+              <div class="Donacion"><i class="bi bi-heart"></i> QUIERO DONAR</div>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row text-center" style="padding-top: 14%;">
+      <div class="col">
+        <img src="../static/img/Logo.svg" alt="">
+      </div>
+    </div>
+
+    <div class="row" style=" padding-top: 4%;">
+      <div id="TextoIxaya" class="col text-center">
+        <div class="TextoIxaya">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="galeria" class="carousel slide" data-bs-ride="carousel" style="width: 100%; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#galeria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#galeria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#galeria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/img/Satélite.svg" class="d-block w-100" alt="sat">
+    </div>
+    <div class="carousel-item active">
+      <img src="../static/img/Satélite.svg" class="d-block w-100" alt="sat">
+    </div>
+    <div class="carousel-item active">
+      <img src="../static/img/Satélite.svg" class="d-block w-100" alt="sat">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#galeria" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#galeria" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div id="nosotros">
+  <div id="content" style="margin-top: 74px; margin-left: 57px; margin-right: 57px; ">
+    <div class="container-fluid">
+      
+      <div class="row row-cols-1">
+        <div class="col text-break" style="width:100%; color: #0C1A47; font-size: 64px; font-family: Orbitron; font-weight: 400; line-height: 60px; position: relative;">MISIÓN IXAYA</div>
+      </div>
+
+      <div class="row row-cols-1" style="padding-top: 30px; padding-bottom: 30px;">
+        <div class="col-1" id="description" style="width: 100%; color: #636363; font-size: 28px; font-family: Barlow Semi Condensed; line-height: 39.50px; position: relative;">
+          <span style="font-weight: 700; letter-spacing: 0.10px;">Misión IXAYA </span>
+          <span style="font-weight: 400;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+        </div>      
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 align-items-start" style="padding-bottom: 62px;">
+        <div class="col-md-4">
+          <div style="width: 264px; height: 65px; background: #0C1A47; justify-content: center; align-items: center; display: inline-flex">
+            <div class="QuiNesSomos" style="width: 264px; text-align: center; color: white; font-size: 28px; font-family: League Spartan; font-weight: 700; line-height: 64.19px; letter-spacing: 0.16px; word-wrap: break-word">¿Quiénes somos?</div>
+          </div>
+          <div style="width: 312px; height: 194px; color: #636363; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        
+        <div class="col-md-4">
+          <div style="width: 264px; height: 65px; background: #0C1A47; justify-content: center; align-items: center; display: inline-flex">
+            <div class="QuiNesSomos" style="width: 264px; text-align: center; color: white; font-size: 28px; font-family: League Spartan; font-weight: 700; line-height: 64.19px; letter-spacing: 0.16px; word-wrap: break-word">¿Qué hacemos?</div>
+          </div>
+          <div style="width: 312px; height: 194px; color: #636363; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+        </div>
+        
+        <div class="col-md-4">
+          <div style="width: 264px; height: 65px; background: #0C1A47; justify-content: center; align-items: center; display: inline-flex">
+            <div class="QuiNesSomos" style="width: 264px; text-align: center; color: white; font-size: 28px; font-family: League Spartan; font-weight: 700; line-height: 64.19px; letter-spacing: 0.16px; word-wrap: break-word">¿Por qué donar?</div>
+          </div>
+          <div style="width: 312px; height: 194px; color: #636363; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="News" style="width: 100%; height: 760px; position: relative; background: white; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+  <div style="margin-left: 57px; margin-top: 67px;">
+    <div id="newsrusel" class="carousel slide" data-bs-ride="carousel" style="height: 310px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+      <div class="carousel-inner">
+        {% for nn in noticias %}
+        <div class="carousel-item active">
+          <div class="row">
+          {% for n in nn%}
+            <div class="col-sm-4">
+              <div class="card" style="width: 18rem; position: absolute;">
+                <img src={{n.img}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{n.title}}</h5>
+                  <p class="card-text">{{n.desc}}</p>
+                  <a href={{n.ref}}>Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#newsrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#newsrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div> -->
+
+<div id="donacion" class="container-fluid Donar" style="width: 100%; height: 721px; position: relative; background: #1F3262;">
+  <div class="EarthGlobe" style="left: 10%; top: 24%; position: absolute">
+    <img src="../static/img/EarthGlobe.svg" alt="">
+  </div>
+  <div class="SatLite" style="left: 32%; top: 54%; position: absolute">
+    <img src="../static//img/Cubesat.svg" alt="">
+  </div>
+  <div style="width: 0px; height: 87%; left: 47.5%; top: 5%; position: absolute; border: 1px white solid"></div>
+  <div style="width: 16px; height: 250.69px; left: 47.5%; top: 128.58px; position: absolute; background: white"></div>
+  <div style="width: 45%; height: 128px; left: 54%; top: 151px; position: absolute; color: white; font-size: 64px; font-family: Orbitron; font-weight: 400; text-transform: uppercase; line-height: 63.19px; word-wrap: break-word">¡Sé parte del equipo IXAYA!</div>
+  <div style="width: 40%; height: 96px; left: 54%; top: 296px; position: absolute; color: white; font-size: 28px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 36.50px; letter-spacing: 0.10px; word-wrap: break-word">Conoce los beneficios de ser un patrocinador de Misión IXAYA y las insignias que pueden recibir tu empresa y tú.</div>
+  <div style="width: 40%; height: 97px; left: 54%; top: 468px; position: absolute; background: #A08847; justify-content: center; align-items: center; display: inline-flex">
+    <a  href="#" style="text-decoration: none;">
+      <div id="Cta" style=" justify-content: center; align-items: center; background: #A08847; display: inline-flex">
+        <div class="QuieroDonar"><i class="bi bi-heart"></i> QUIERO DONAR</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div id="aliados" class="Aliados">
+  <div id="content" style="margin-top: 67px; margin-left: 57px; margin-right: 57px; ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col" style="color: white; font-size: 64px; font-family: Orbitron; font-weight: 400; line-height: 79.69px;">ALIADOS <br/>ESTRATÉGICOS</div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-1" style="margin-top: 70px; margin-bottom: 36px; width: 296px; height: 41px; background: #1F3262; border: 0.50px white solid; justify-content: center; align-items: center; display: inline-flex">
+          <div style="color: white; font-size: 24px; font-family: Barlow Semi Condensed; font-weight: 600; line-height: 79.69px; letter-spacing: 6.50px; word-wrap: break-word">INDIVIDUOS</div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-3 text-center">
+          
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 1</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #5263FF; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">WATCHER</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 2</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #4DC6FC; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">EXPLORER</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div> 
+        </div>
+        
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 3</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #F65F65; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700; word-wrap: break-word">TRAVELER</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 4</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #FF50E8; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">GUARDIAN</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-1" style="margin-top: 70px; margin-bottom: 36px; width: 296px; height: 41px; background: #1F3262; border: 0.50px white solid; justify-content: center; align-items: center; display: inline-flex">
+          <div style="color: white; font-size: 24px; font-family: Barlow Semi Condensed; font-weight: 600; line-height: 79.69px; letter-spacing: 6.50px; word-wrap: break-word">INSTITUCIONES</div>
+        </div>
+      </div>
+
+      <div class="row text-center" style="padding-bottom: 80px;">
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 1</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #BD3416; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">PYRE</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 2</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #CCA563; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">NEBULA</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 3</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #9E9E9E; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">SILVER</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-3">
+          <div style="height: 425px; background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 26.44px; border: 1.16px white solid; backdrop-filter: blur(27.76px); display:inline-block;">
+            <div id="Nivel1" style="margin-top: 15%; color: white; font-size: 24px; font-family: League Spartan; font-weight: 700;">NIVEL 4</div>
+            <div id="Frame" style="margin-top: 2%; padding-top: 4%; padding-bottom: 4%; padding-left: 10%; padding-right: 10%; background: #435C82; border-radius: 100px; justify-content: center; align-items: center; display: inline-flex">
+              <div class="Watcher" style="color: white; font-size: 28px; font-family: Orbitron; font-weight: 700;">BLUE DOT</div>
+            </div>
+            <div style="margin: 10%; text-align: justify; color: white; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="Contacto" style="width: 1440px; height: 1070px; left: 0px; top: 6228px; position: absolute; background: #EFEDE9"></div> -->
+<div id="patrocinadores" style="width: 100%; position: relative; background: white; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+  <div style="margin-left: 57px; margin-top: 67px; margin-right: 57px;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-break" style="color: #0C1A47; font-size: 64px; font-family: Orbitron; font-weight: 400; line-height: 45.69px;">PATROCINADORES</div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div style="margin-top: 11px; margin-bottom: 44px; color: #636363; font-size: 28px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 39.50px; word-wrap: break-word">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 100px;">
+        <div class="col">
+          <div id="patrorusel" class="carousel slide" data-bs-ride="carousel" style="height: 310px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+            <div class="carousel-inner">
+              {% for pp in patrocinadores %}
+              <div class="carousel-item active px-0">
+                <div class="container-fluid">
+                  <div class="row justify-content-between" style="gap: 32px;">
+                    {% for p in pp%}
+                    <div class="col" style="padding-top: 37px; padding-bottom: 59px; padding-left: 30px; padding-right: 30px; background: #EFEDE9; border-bottom-left-radius: 50px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+                      <div style="color: #0C1A47; font-size: 40px; font-family: League Spartan; font-weight: 700; line-height: 39.50px; word-wrap: break-word">{{p.name}}</div>
+                      <div style="width: 100%; height: 3px; background: #A39274"></div>
+                      <div style="width: 100%; height: 147px; text-align: justify; color: #636363; font-size: 18px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 27px; word-wrap: break-word">
+                        {{p.desc}}
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#patrorusel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#patrorusel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{% endblock %}
