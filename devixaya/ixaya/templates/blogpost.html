@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %} IXAYA {% endblock %}
+
+{% block body %}
+<div id="blog">
+
+    <div class="container-fluid" style="height: 768px; background-image: url({{post.image.url}}); background-size:cover; flex-direction: column; display: flex;">
+        <!-- <img src="{{post.image.url}}" style="visibility: hidden;"> -->
+        <div style=" margin-left: 12%; margin-top: 40%; max-width: 60%; color: white; font-size: 48px; font-family: League Spartan; font-weight: 700; line-height: 56px; word-wrap: break-word">
+            {{post.title}}
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding-left: 10%; padding-right: 10%; width: 100%; padding-top: 6%; padding-bottom: 10%; background: white; justify-content: center; align-items: center; display: inline-flex">
+        <div style="width: 1093px; height: 827px; color: #636363; font-size: 20px; font-family: Barlow Semi Condensed; line-height: 31.50px; word-wrap: break-word">
+            {{post.content | safe}}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
