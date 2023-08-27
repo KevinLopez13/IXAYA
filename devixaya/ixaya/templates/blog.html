@@ -1,4 +1,4 @@
-{% extends "./base.html" %}
+{% extends "./base_support.html" %}
 {% load static %}
 
 {% block title %} BLOG IXAYA {% endblock %}
@@ -20,23 +20,33 @@
 
   <div class="container-fluid" style="width: 100%; position: relative; background: #EFEDE9; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; padding: 4%;">
     <div class="container-fluid px-0">
-        <div class="row row-cols-md-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
           {% for p in posts %}
-          <div class="col">
+          <div class="col" style="margin-bottom: 25px;">
             <div class="card" style="position: relative;">
               <img src="{{p.image.url}}" class="card-img-top" alt="" style="height: 280px;">
-              <div class="card-body" style=" height:300px; padding: 10%; border: 1px red solid">
+              <div class="card-body" style=" height:300px; padding: 10%;">
                 <div class="card-title text-center d-inline-flex" style="background: #1F3262; border-radius: 80px; padding-left:15px; padding-right:15px; padding-top: 5px; padding-bottom: 5px; color: white; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; word-wrap: break-word;">
                     {{p.title}}
                 </div>
                 <div style="color: #636363; font-size: 32px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 38px; word-wrap: break-word">
                   <p>{{p.resume}}</p>
                 </div>
+
+                {% if p.link %}
+                <a href="{{p.link}}" style="text-decoration: none;">
+                  <div style="color: #A08847; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; line-height: 38px; word-wrap: break-word">
+                    Leer mas...
+                  </div>
+                </a>
+                {% else %}
                 <a href="/blogpost/{{p.title}}" style="text-decoration: none;">
                   <div style="color: #A08847; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; line-height: 38px; word-wrap: break-word">
                     Leer mas...
                   </div>
                 </a>
+                {% endif %}
+
               </div>
             </div>
           </div>

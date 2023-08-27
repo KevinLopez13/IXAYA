@@ -1,0 +1,36 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %} IXAYA {% endblock %}
+
+{% block body %}
+<div id="support">
+
+    <div class="container-fluid" style="max-height: 1038px; width: 100%; max-width: 100%; flex-direction: column; display: flex; background: #0C1A47">
+        <div class="container-fluid" style="margin-bottom: 46px; margin-top: 10%;">
+            <div class="row text-center">
+                <div id="logo" class="col text-center justify-content-center" style="width: 100%;">
+                    <img src="../static/img/Logo.svg" alt="" style="width: 126px;">
+                    <div style="margin-left: 32.5%; width: 35%; height: 2px; background: #A08847; margin-top: 28px; margin-bottom: 15px;"></div>
+                    <div style="color: white; font-size: 64px; font-family: Orbitron; font-weight: 400; line-height: 45.69px;">APOYO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="debug container-fluid align-items-start" style="padding-bottom: 62px;">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+                Bla bla bla ...
+            </div>
+            <div class="col">
+                <div style="margin-top: 13%; margin-bottom: 13%; width: 100%; position: relative; background: #A08847; justify-content: center; align-items: center; display: inline-flex;">
+                    <a  href="/support" style="text-decoration: none;">
+                        <div class="QuieroDonar text-center"><i class="bi bi-heart"></i> QUIERO APOYAR</div>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -17,6 +17,7 @@
     </head>
 
     <body>
+      
       <nav id="header" class="navbar navbar-expand-lg navbar-dark" style="width: 100%; position: absolute;">
         <div class="container-fluid" style="margin-top: 10px;">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,22 +33,24 @@
                 <a class="nav-link" href="/inicio#nosotros"> Nosotros </a>
               </li>
               <li class="nav-item px-2">
-                <a class="nav-link" href="/blog"> Blog </a>
+                <a class="nav-link" href="/blog/0"> Blog </a>
               </li>
               <li class="nav-item px-2">
                 <a class="nav-link" href="/inicio#aliados"> Aliados </a>
               </li>
-              <li class="nav-item px-2">
+              <!-- <li class="nav-item px-2">
                 <a class="nav-link" href="/inicio#patrocinadores"> Patrocinadores </a>
-              </li>
+              </li> -->
               <li class="nav-item px-2">
                 <a class="nav-link"  href="#contacto">Contacto</a>
               </li>
-              <li class="nav-item px-2" style="margin-left:auto;"><a href="#donacion">
-                <div style="width: 233px; justify-content: center; align-items: center; background: #A08847; display: inline-flex">
-                  <div class="Donacion"><i class="bi bi-heart"></i> QUIERO APOYAR</div>
-                </div>
-              </a></li>
+              <li class="nav-item px-2" style="margin-left:auto;">
+                <a href="/support">
+                  <div style="width: 233px; justify-content: center; align-items: center; background: #A08847; display: inline-flex">
+                    <div class="Donacion"><i class="bi bi-heart"></i> QUIERO APOYAR</div>
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -59,42 +62,26 @@
             {% endblock %}
         </div>
 
-        <div id="donacion" class="container-fluid Donar" style="width: 100%; height: 721px; position: relative; background: #1F3262;">
-          <div class="EarthGlobe" style="left: 10%; top: 24%; position: absolute">
-            <img src="../static/img/EarthGlobe.svg" alt="">
-          </div>
-          <div class="SatLite" style="left: 32%; top: 54%; position: absolute">
-            <img src="../static//img/Cubesat.svg" alt="">
-          </div>
-          <div style="width: 0px; height: 87%; left: 47.5%; top: 5%; position: absolute; border: 1px white solid"></div>
-          <div style="width: 16px; height: 250.69px; left: 47.5%; top: 128.58px; position: absolute; background: white"></div>
-          <div style="width: 45%; height: 128px; left: 54%; top: 151px; position: absolute; color: white; font-size: 64px; font-family: Orbitron; font-weight: 400; text-transform: uppercase; line-height: 63.19px; word-wrap: break-word">¡Sé parte del equipo IXAYA!</div>
-          <div style="width: 40%; height: 96px; left: 54%; top: 296px; position: absolute; color: white; font-size: 28px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 36.50px; letter-spacing: 0.10px; word-wrap: break-word">Conoce los beneficios de ser un patrocinador de Misión IXAYA y las insignias que pueden recibir tu empresa y tú.</div>
-          <div style="width: 40%; height: 97px; left: 54%; top: 468px; position: absolute; background: #A08847; justify-content: center; align-items: center; display: inline-flex">
-            <a  href="#" style="text-decoration: none;">
-              <div id="Cta" style=" justify-content: center; align-items: center; background: #A08847; display: inline-flex">
-                <div class="QuieroDonar"><i class="bi bi-heart"></i> QUIERO APOYAR</div>
-              </div>
-            </a>
-          </div>
-        </div>
+        {% block support %}
+        
+        {% endblock %}
 
         <div id = "root2" class="container-fluid px-0">
           {% block body2 %}
         
           {% endblock %}
         </div>
-        
+
         <div id="contacto" style="width: 100%; position: relative; background: #EFEDE9; flex-direction: column; display: flex;">
             <div style="margin-left: 57px; margin-top: 76px; margin-right: 57px;">
               <div class="container-fluid" style="padding-bottom: 57px;">
                 
                 <div class="row" style="margin-bottom: 70px;">
-                  <div class="col" style="color: #0C1A47; font-size: 64px; font-family: Orbitron; font-weight: 400; line-height: 45.69px;">CONTÁCTANOS</div>
+                  <div class="col"><span class="section-text-bl">CONTÁCTANOS</span></div>
                 </div>
                 
-                <div class="row text-center">
-                  <div class="col-6">
+                <div class="row row-cols-1 row-cols-md-2 text-center">
+                  <div class="col align-self-start">
                     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
                     <script>
                       hbspt.forms.create({
@@ -104,45 +91,80 @@
                       });
                     </script>
                   </div>
-                  <div class="col">
-                    <img src="../static/img/Astronauta.svg" alt="" style="max-width: 500px;">
+                  <div class="col background-normalized" style="background-image: url(../static/img/Astronauta.svg);" >
+                    <img src="../static/img/Astronauta.svg" style="max-width: 600px; visibility: hidden;">
                   </div>
                 </div>
               </div>
             </div>
         </div>
 
-        <div id="footer" style="width: 100%; height: 297px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; background: #ACC2D4;">
-            <div style="margin-left: 54px; margin-top: 40px;">
-              <img src="../static/img/LogoUNAM.svg" alt="", style="height: 55px; position: relative; display: inline-flex; margin-right: 15px;">
-              <img src="../static/img/LogoCIC.svg" alt="", style="height: 50px; position: relative; display: inline-flex; margin-right: 15px;">
-              <img src="../static/img/LogoPEU.svg" alt="", style="height: 55px; position: relative; display: inline-flex; margin-right: 15px;">
-              <img src="../static/img/LogoTUNAM.svg" alt="", style="height: 55px; position: relative; display: inline-flex; margin-right: 15px;">
-            </div>
-            <div class="row align-items-end" style="width: 92%; margin-left: 54px; margin-top: 40px;">
-              <div class="col-md-3" style="display: inline-block;">
-                <div class="footer-link">MAPA DE SITIO</div>
-                <div class="footer-link">PRIVACIDAD</div>
-                <div class="footer-link">TÉRMINOS DE USO</div>
+        <div id="footer" class="container-fluid" style="background: #ACC2D4; padding: 3%;">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-bottom: 3%;">
+            <div class="col" style="width: auto; height:65px;">
+              <div class="d-flex">
+                <img src="../static/img/LogoUNAM.svg" alt="", style="height: 55px; margin-right: 15px;">
+                <img src="../static/img/LogoCIC.svg" alt="", style="height: 55px;">
               </div>
-              <div class="col-md-9 col-sm-12" style="padding-bottom: 13px;">
-                <div class="row align-items-end py-2">
-                  <div class="col-10 px-0" style="height: 30px; color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-transform: uppercase; word-wrap: break-word; display: inline-block">Edificio de los Programas, Circuito de la Investigación Científica s/n, Coyoacán,<br>Ciudad Universitaria, C.P. 04510, CDMX.</div>
-                  <div class="col-2" style="height: 13px; text-align: right; color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-decoration: underline; text-transform: uppercase; word-wrap: break-word; display: inline-block">peu@astro.unam.mx</div>
+            </div>
+            <div class="col">
+              <div class="d-flex">
+                <img src="../static/img/LogoPEU.svg" alt="", style="height: 55px; margin-right: 15px;">
+                <img src="../static/img/LogoTUNAM.svg" alt="", style="height: 55px;">
+              </div>
+            </div>
+
+            <div class="col align-self-center" style="margin-left: auto;">
+              <div class="d-flex justify-content-end">
+                <a class="px-1" href="https://www.facebook.com/misionixaya">
+                  <img src="../static/img/IconFB.svg" alt="">
+                </a>
+                <a class="px-1" href="https://www.facebook.com/misionixaya">
+                  <img src="../static/img/IconFB.svg" alt="">
+                </a>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1"style="width: 300px;">
+              <div class="d-flex">
+                <div class=" d-flex flex-column">
+                  <a href="" style="text-decoration: none;"><div class="footer-link">MAPA DE SITIO</div></a>
+                  <a href="" style="text-decoration: none;"><div class="footer-link">PRIVACIDAD</div></a>
+                  <a href="" style="text-decoration: none;"><div class="footer-link">TÉRMINOS DE USO</div></a>
                 </div>
-                <div class="row">
-                  <div id="sep" style="height: 2px; background: #1F3262"></div>
-                </div>
-                <div class="row align-items-start py-1">
-                  <div class="col-1 px-0">
-                    <img src="../static/img/ARPA.svg" alt="", style="width: 63px; height: 24.45px; position: relative; display: inline-block;">
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="d-flex px-0" style="width: 100%;">
+                <div class="d-flex flex-column" style="width: 100%; float: right;">
+                  <div class="d-flex py-1">
+                    <div style="color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-transform: uppercase; word-wrap: break-word;">Edificio de los Programas, Circuito de la Investigación Científica s/n, Coyoacán,<br>Ciudad Universitaria, C.P. 04510, CDMX.</div>
+                    <div class="d-flex align-self-end" style=" margin-left: auto; color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-decoration: underline; text-transform: uppercase; word-wrap: break-word;">peu@astro.unam.mx</div>
                   </div>
-                  <div class="col-2 px-0" style="padding-top: 4px; color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-transform: uppercase; word-wrap: break-word; display: inline-block">DISEÑO WEB</div>
-                  <div class="col-9" style="padding-top: 0px; height: 13px; text-align: right; color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-transform: uppercase; word-wrap: break-word; display: inline-block">2023 © peu</div>
+                  
+                  <div class="d-flex">
+                    <div style="width: 100%; height: 2px; background: #1F3262"></div>
+                  </div>
+
+                  <div class="d-flex">
+                    <div class="d-flex py-2">
+                      <img src="../static/img/ARPA.svg" alt="", style="width: 63px; height: 24.45px; position: relative; display: inline-block;">
+                    </div>
+                    <div class="d-flex align-self-center" style="width: 1px; height: 25px; margin-left: 7px; margin-right: 7px; transform: rotate(180deg); background: #1A2441"></div>
+                    <div class="d-flex align-self-center" style="color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-transform: uppercase; word-wrap: break-word;">DISEÑO WEB</div>
+                    <div class="d-flex align-self-start" style="margin-left: auto; color: #1F3262; font-size: 12px; font-family: Barlow Semi Condensed; font-weight: 600; text-transform: uppercase; word-wrap: break-word;">2023 © peu</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- <script src="../static/js/carousel.js"> </script> -->
     </body>
 </html>

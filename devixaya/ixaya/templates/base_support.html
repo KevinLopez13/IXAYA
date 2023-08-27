@@ -1,0 +1,49 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %} IXAYA {% endblock %}
+
+{% block support %}
+
+<div id="donacion" class="container-fluid" style="background: #1F3262; position: relative;">
+  <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 justify-content-center">
+    
+    <div class="col text-center align-self-center py-3 px-3" style="max-width: 535px; justify-content: center;">
+      <div style=" background-image: url(../static/img/IconDonacion.svg); background-repeat: no-repeat; background-position: center; background-size: contain;">
+        <img src="../static/img/IconDonacion.svg" style="visibility: hidden;">
+      </div>
+    </div>
+    <div class="col">
+      <div class="d-flex d-flex-row">
+        <div style="padding-top:4%; padding-bottom: 4%;">
+          <img src="../static/img/Separator.svg" style="height: 100%; max-width:17px;">
+        </div>
+        <div style="margin-left: 8%; margin-right: 8%; padding-top: 4%;" >
+          <div style="margin-top: 10%; width: 100%; position: relative; color: white; font-size: 64px; font-family: Orbitron; font-weight: 400; text-transform: uppercase; line-height: 63.19px; word-wrap: break-word">
+            ¡Sé parte del equipo IXAYA!
+          </div>
+          <div style="margin-top: 5%; position: relative; color: white; font-size: 28px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 36.50px; letter-spacing: 0.10px; word-wrap: break-word">
+            <span style="font-weight: bold;">
+              Únete a la Misión IXAYA y conviértete en un auténtico Guardián del espacio.    
+            </span>
+            <br><br>
+            Si eres una empresa comprometida con el desarrollo sustentable  o si eres un individuo apasionado por 
+            la tecnología y la protección ambiental, juntos pondremos nuestros ojos en el cielo para salvaguardar 
+            la Zona Metropolitana del Valle de México y crear un futuro más seguro y prometedor para todos. 
+            <br><br>
+            <span style="font-weight: bold;">
+              Descubre cómo puedes unirte a esta misión.
+            </span>
+          </div>
+          <div style="margin-top: 8%; margin-bottom: 10%; width: 100%; position: relative; background: #A08847; justify-content: center; align-items: center; display: inline-flex;">
+            <a  href="/support" style="text-decoration: none;">
+                <div class="QuieroDonar text-center"><i class="bi bi-heart"></i> QUIERO APOYAR</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
