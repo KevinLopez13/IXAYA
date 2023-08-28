@@ -18,42 +18,75 @@
       </div>
   </div>
 
-  <div class="container-fluid" style="width: 100%; position: relative; background: #EFEDE9; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; padding: 4%;">
+  <div class="container-fluid section" style="width: 100%; background: #EFEDE9;">
     <div class="container-fluid px-0">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-          {% for p in posts %}
-          <div class="col" style="margin-bottom: 25px;">
-            <div class="card" style="position: relative;">
-              <img src="{{p.image.url}}" class="card-img-top" alt="" style="height: 280px;">
-              <div class="card-body" style=" height:300px; padding: 10%;">
-                <div class="card-title text-center d-inline-flex" style="background: #1F3262; border-radius: 80px; padding-left:15px; padding-right:15px; padding-top: 5px; padding-bottom: 5px; color: white; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; word-wrap: break-word;">
-                    {{p.title}}
-                </div>
-                <div style="color: #636363; font-size: 32px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 38px; word-wrap: break-word">
-                  <p>{{p.resume}}</p>
-                </div>
-
-                {% if p.link %}
-                <a href="{{p.link}}" style="text-decoration: none;">
-                  <div style="color: #A08847; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; line-height: 38px; word-wrap: break-word">
-                    Leer mas...
-                  </div>
-                </a>
-                {% else %}
-                <a href="/blogpost/{{p.title}}" style="text-decoration: none;">
-                  <div style="color: #A08847; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; line-height: 38px; word-wrap: break-word">
-                    Leer mas...
-                  </div>
-                </a>
-                {% endif %}
-
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {% for p in posts %}
+        <div class="col" style="margin-bottom: 25px;">
+          <div class="card" style="position: relative;">
+            <img src="{{p.image.url}}" class="card-img-top" alt="" style="height: 280px;">
+            <div class="card-body" style=" height:300px; padding: 10%;">
+              <div class="card-title text-center d-inline-flex" style="background: #1F3262; border-radius: 80px; padding-left:15px; padding-right:15px; padding-top: 5px; padding-bottom: 5px; color: white; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; word-wrap: break-word;">
+                  {{p.title}}
               </div>
+              <div style="color: #636363; font-size: 32px; font-family: Barlow Semi Condensed; font-weight: 400; line-height: 38px; word-wrap: break-word">
+                <p>{{p.resume}}</p>
+              </div>
+
+              {% if p.link %}
+              <a href="{{p.link}}" style="text-decoration: none;">
+                <div style="color: #A08847; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; line-height: 38px; word-wrap: break-word">
+                  Leer mas...
+                </div>
+              </a>
+              {% else %}
+              <a href="/blogpost/{{p.title}}" style="text-decoration: none;">
+                <div style="color: #A08847; font-size: 20px; font-family: Barlow Semi Condensed; font-weight: 500; line-height: 38px; word-wrap: break-word">
+                  Leer mas...
+                </div>
+              </a>
+              {% endif %}
             </div>
           </div>
-          {% endfor %}
         </div>
+        {% endfor %}
+      </div>
     </div>
-</div>
+
+    <div class="container-fluid pt-5">
+      <nav aria-label="Blog navigation">
+        <ul class="pagination justify-content-center">
+          {% if active == 1 %}
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <a class="page-link" href="/blog/{{prev}}">Previous</a>
+            </li>
+          {% endif %}
+          
+          {% for p in pages %}
+            {% if active == p %}
+            <li class="page-item active"><a class="page-link" href="/blog/{{p}}">{{p}}</a></li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="/blog/{{p}}">{{p}}</a></li>
+            {% endif %}  
+          {% endfor %}
+          
+          {% if active != total_pages %}
+            <li class="page-item">
+              <a class="page-link" href="/blog/{{next}}">Next</a>
+            </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">Next</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </div>
 
 </div>
 {% endblock %}

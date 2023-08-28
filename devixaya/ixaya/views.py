@@ -18,9 +18,22 @@ def inicio(request):
                 )
 
 def blog(request,page):
-    ki = page*6
-    posts_query = Blogpost.objects.all().order_by('-datetime')[ki:ki+6]
-    return render(request,'blog.html',{'posts':posts_query})
+    ppp = 6 #post per page
+    mpi = 5 # max per items
+    ki = page*ppp
+    posts_query = Blogpost.objects.all().order_by('-datetime')
+    posts = posts_query[ki-ppp:ki]
+    total_pages = math.ceil(len(posts_query)/ppp)
+    pages = [p for p in range(1,total_pages+1) if page-mpi//2 <= p <= page+mpi//2]
+
+    return render(request,'blog.html',
+                  {'posts':posts,
+                   'pages':pages,
+                   'active':page,
+                   'total_pages':total_pages,
+                   'prev': page-1,
+                   'next': page+1,
+                   })
 
 def blogpost(request, post):
     post = Blogpost.objects.get(title=post)

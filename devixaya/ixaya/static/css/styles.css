@@ -1,10 +1,28 @@
 
-.active a {
+.debug{
+    border: 1px red solid;
+}
+
+.nav > .active > a {
     color: #A08847;
 }
 
-.debug{
-    border: 1px red solid;
+.pagination > li > a {
+    background-color: white;
+    color: #1F3262;
+}
+
+.pagination > .active > a {
+    color: white;
+    background-color: #1F3262 !Important;
+    border: solid 1px #1F3262 !Important;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover {
+    color: #1F3262;
+    background-color: #eee;
+    border-color: #ddd;
 }
 
 .Hero{
@@ -53,6 +71,7 @@
     letter-spacing: 0.10px;
     /* padding-left: 160px;
     padding-right: 160px; */
+    margin-bottom: 35px;
 }
 
 
@@ -84,20 +103,6 @@
     /* align-items: center; */
     display: flex
 }
-
-/* .carousel-control-next-icon{
-    position: absolute;
-    bottom: -60px;
-    right: 500px;
-    border: 1px red solid;
-}
-
-.carousel-control-prev-icon{
-    position: absolute;
-    bottom: -60px;
-    left: 500px;
-    border: 1px red solid;
-} */
 
 
 .footer-logo{
@@ -219,23 +224,49 @@ div .blue-box{
     background-size: contain;
 }
 
-.multiple-carousel-inner{
-    display: flex;
+
+#sponsorCarousel .card{
+    max-width: 370px;
 }
 
-.multiple-carousel-item{
-    display: block;
+#sponsorCarousel .carousel-control-next-icon {
+    background-image: url("../img/SliderFw.svg");
 }
 
+#sponsorCarousel .carousel-control-prev-icon {
+    background-image: url("../img/SliderBw.svg");
+}
 
-/* @media screen and (min-width:576px){
-    .carousel-inner{
-        display: flex;
+#sponsorCarousel .carousel-control-prev{
+    top: 100%;
+    left: 30%;
+    height: 3em;
+    width: 3em;
+}
+
+#sponsorCarousel .carousel-control-next {
+    top: 100%;
+    right: 30%;
+    height: 3em;
+    width: 3em;
+}
+
+@media (min-width: 992px) {
+    #sponsorCarousel .carousel-item{
+      margin-right: 0;
+      flex: 0 0 33.3333%;
+      display: block;
+    }
+    
+    #sponsorCarousel .carousel-inner{
+      display: flex;
     }
 
-    .carousel-item{
-        display: block;
-        margin-right: 0;
-        flex: 0 0 calc(100%/3) ;
+    #sponsorCarousel .carousel-control-prev{
+        left: 45%;
     }
-} */
+    
+    #sponsorCarousel .carousel-control-next {
+        right: 45%;
+    }
+}
