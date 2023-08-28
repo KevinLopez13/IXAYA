@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'devixaya.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'ixayadb.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
